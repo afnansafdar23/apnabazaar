@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 
@@ -22,26 +23,34 @@
             <div class="header flex items-center w-full justify-center lg:w-auto">
                 <img src="/public/images/PickBazar logo.webp" class="logo relative h-10 w-32 overflow-hidden md:w-40"
                     alt="">
-                <div class="hidden ml-10 rtl:mr-10 ltr:mr-auto rtl:ml-auto xl:block">
-                    <div class="relative inline-block ltr:text-left rtl:text-right"> <select
-                            class="p-3 align-middle border-border-200 rounded"><i
-                                class=" fa-thin fa-apple-whole"></i><button
-                                class="flex items-center shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4 bg-light xl:border  border-border-200 xl:text-accent xl:min-w-150 rounded"
-                                type="button" aria-haspopup="true" aria-expanded="false"><span
-                                    class="whitespace-nowrap"></i>Bags
-                                    <option><a href="/index.html">Grocery</a></option>
-                                    <option><a href="/pages/bakery.html">Bakery</a></option>
-                                    <option><a href="/pages/makeup.html">Makeup</a></option>
-                                    <option><a href="/pages/bags.html">Bags</a></option>
-                                    <option><a href="/pages/clothing.html">Clothing</a></option>
-                                    <option><a href="/pages/furniture.html">Furniture</a></option>
-                                    <option><a href="/pages/dailyneed.html">Daily Needs</a></option>
-                                    <option><a href="/pages/book.html">Books</a></option>
-                                </span>
-
-                            </button></select>
+                    <div class="hidden ml-10 xl:block">
+                        <div class=" inline-block fixed -mt-5">
+                            <div class=" align-middle border-border-200 w-full rounded" id="show"><button
+                                    class="flex relative items-center  shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4 bg-white xl:border active:fixed-top border-border-200 xl:text-navbtn xl:min-w-150 rounded gap-1"
+                                    type="button"><i class="fa fa-thin fa-apple-whole"></i> Bags <i
+                                        class="fa fa-thin fa-caret-down"></i></button></div>
+                            <div class="hidden p-2 gap-3 drop-shadow-lg bg-white mt-1 text-sm font-semibold" id="menu">
+                                <ul>
+                                    <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                            href="/index.html">Grocery</a></li>
+                                    <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                            href="/pages/bakery.html">Bakery</a></li>
+                                    <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                            href="/pages/makeup.html">Makeup</a></li>
+                                    <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                            href="/pages/bags.html">Bags</a></li>
+                                    <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                            href="/pages/clothing.html">Clothing</a></li>
+                                    <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                            href="/pages/furniture.html">Furniture</a></li>
+                                    <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                            href="/pages/dailyneed.html">Daily Needs</a></li>
+                                    <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                            href="/pages/book.html">Books</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
             </div>
             <ul class="dropdown-content items-center shrink-0 hidden lg:flex space-x-10 rtl:space-x-reverse">
                 <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline hover:text-accent focus:text-accent"
@@ -52,21 +61,23 @@
                         href="/pages/faq.html">FAQ</a></li>
                 <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline hover:text-accent focus:text-accent"
                         href="/pages/contact.html">Contact</a></li>
+                        <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline focus:text-accent"
+                            href="/pages/blog.html">Blog</a></li>
                 <div class=" flex items-center space-x-4  rtl:space-x-reverse"><a href="/pages/login.html"target="_blank"><button
                             class="nav-btn items-center justify-center 
-                    font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-sm bg-primary">Become
+                    font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-sm bg-emerald-600">Become
                             a
                             Seller</button></a>
                     <li><button data-variant="normal" id="open"
                             class="nav-btn items-center justify-center 
-                             font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-sm bg-primary">Join</button>
+                             font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-sm bg-emerald-600">Join</button>
                     </li>
                 </div>
             </ul>
         </nav>
-    </div>
+    </div><br><br><br>
     <!-- Header ends -->
-    <div class="hidden fixed bg-opacity-50 bg-slate-600 bg-fixed z-50 w-full h-screen" id="dialog">
+    <div class="hidden fixed bg-opacity-50 bg-slate-600 bg-fixed top-0 z-50 w-full h-screen" id="dialog">
         <div class="h-screen w-full"id="close"></div>
         <div
             class=" fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/3 bg-white rounded-md px-8 py-6 space-y-5 drop-shadow-lg ">
@@ -93,13 +104,13 @@
                     autocomplete="off" autocorrect="off">
             </div>
             <button
-                class="inline-flex items-center justify-center flex-shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 bg-primary text-light border border-transparent hover:bg-accent-hover px-5 py-0 h-12 w-full">Login</button>
+                class="inline-flex items-center justify-center flex-shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 bg-emerald-600 text-light border border-transparent hover:bg-accent-hover px-5 py-0 h-12 w-full">Login</button>
             <div
                 class="flex flex-col items-center justify-center relative text-sm text-heading mt-8 sm:mt-11 mb-6 sm:mb-8">
                 <hr class="w-full"><span class="absolute start-2/4 -top-2.5 px-2 -ms-4 bg-white">Or</span>
             </div>
             <button
-                class="inline-flex items-center justify-center flex-shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 bg-primary text-light border border-transparent !hover:bg-gray-600 px-5 py-0 h-12 w-full"><i class="fa-brands fa-google mr-1"></i>Login with Google</button>
+                class="inline-flex items-center justify-center flex-shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 bg-emerald-600 text-light border border-transparent !hover:bg-gray-600 px-5 py-0 h-12 w-full"><i class="fa-brands fa-google mr-1"></i>Login with Google</button>
             <button
                 class="inline-flex items-center justify-center flex-shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 bg-gray-500 text-light border border-transparent hover:bg-accent-hover px-5 py-0 h-12 w-full"><i class="fa fa-thin fa-mobile-screen-button mr-1"></i>Login with Mobile number</button>
                 <div
@@ -115,7 +126,7 @@
     <div class="relative w-full lg:space-y-10  hidden lg:table">
         <img src="/public/images/bags-landing.webp" class=" h-screen w-screen border-b-0 " alt="">
         <div
-            class=" md:px-20  lg:space-y-10  hidden lg:table p-5 md:px-20 mt-8 absolute inset-0 w-full align-middle !pt-28 flex-col items-center justify-center  text-center lg:space-y-10">
+            class="hidden lg:table p-5 md:px-20 mt-8 absolute inset-0 w-full align-middle !pt-28 flex-col items-center justify-center  text-center lg:space-y-10">
             <h1 class="text-2xl lg:text-4xl xl:text-5xl tracking-tight text-heading font-bold">Exclusive Branded bags
             </h1>
             <p class="text-sm lg:text-base xl:text-lg text-heading">Get your exclusive & branded bags delivered to you
@@ -129,7 +140,7 @@
                             class="search item-center flex h-full p-4 w-full appearance-none overflow-hidden truncate rounded-lg text-sm text-heading placeholder-gray-500 transition duration-300 ease-in-out focus:outline-none focus:ring-0 bg-light ltr:pl-6 rtl:pr-6 ltr:pr-14 rtl:pl-14 ltr:rounded-tr-none rtl:rounded-tl-none ltr:rounded-br-none rtl:rounded-bl-none  border ltr:border-r-0 rounded-r-none rtl:border-l-0 border-transparent focus:border-accent"
                             name="search" placeholder="Search your products from here" value="">
                         <button
-                            class="flex h-full min-w-[143px] w-2/5 items-center justify-center rounded-lg bg-primary px-8 font-semibold text-light transition-colors duration-200 hover:bg-green-700 focus:bg-accent-hover focus:outline-none  rounded-l-none">Search</button>
+                            class="flex h-full min-w-[143px] w-2/5 items-center justify-center rounded-lg bg-emerald-600 px-8 font-semibold text-light transition-colors duration-200 hover:bg-green-700 focus:bg-accent-hover focus:outline-none  rounded-l-none">Search</button>
                     </div>
                 </form>
             </div>
@@ -154,6 +165,15 @@
         </div>
     </div>
     <!-- Home Slider ends -->
+    <div
+    class="sticky  z-10 flex h-14 items-center justify-between border-t border-b border-border-200 bg-light py-3 px-5 md:top-16 md:h-16 lg:top-22 lg:px-7 xl:hidden">
+    <button
+        class="flex h-8 items-center rounded border border-border-200 bg-gray-100 bg-opacity-90 py-1 px-3 text-sm font-semibold text-heading transition-colors duration-200 md:h-10 md:py-1.5 md:px-4 md:text-base">Filter</button>
+    <div class="relative inline-block"><button
+            class="flex items-center shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4 bg-white xl:border border-border-200 xl:text-accent xl:min-w-150 rounded"
+            id="headlessui-menu-button-2" type="button" aria-haspopup="true" aria-expanded="false"><span
+                class="whitespace-nowrap px-3">Bags<i class="fa-solid fa-sort-down"></i></span></button></div>
+</div>
     <!-- products and catagories start -->
     <div class="flex border-t border-solid border-border-200 border-opacity-70">
         <aside class="lg:sticky lg:top-22 h-full xl:w-72 hidden xl:block bg-light undefined">
@@ -181,11 +201,11 @@
         </aside>
         <div class="products w-full bg-light pb-8 lg:p-6   grid-cols-2  ">
             <div
-                class="product-card gap-5  p-4 justify-around col-md-12 sm:col grid md:grid-cols-3 lg:grid-cols-4 grid-cols-1 overflow-hidden">
+                class="product-card gap-5  p-4 justify-around sm:grid-cols-2 grid md:grid-cols-3 lg:grid-cols-4 grid-cols-1 overflow-hidden">
                 <div
                     class="cart-type-neon border border-border-200  w-64 rounded h-full mr-3 overflow-hidden shadow-sm transition-all duration-200 hover:shadow transform hover:-translate-y-0.5 col-md-4">
                     <img src="/public/images/Bags.webp"
-                        class="product-img relative flex items-center justify-center cursor-pointer w-auto h-48 sm:h-64"
+                        class="product-img relative flex items-center w-full justify-center cursor-pointer  h-48 sm:h-64"
                         alt="">
                     <div class="product-descript p-3 bg-white md:p-6">
                         <h3>Balenciaga</h3> <br> <span>1 pc(s)</span><br>
@@ -194,14 +214,14 @@
                         <button
                             class="flex items-center justify-between  w-full text-xs transition-colors bg-gray-100 rounded group h-7 md:h-9 md:text-sm text-body-dark hover:bg-green-600 hover:border-accent hover:text-white focus:outline-none focus:bg-accent focus:border-accent focus:text-light"><span
                                 class="flex-1">Add</span><span
-                                class="grid transition-colors duration-200 bg-gray-200 w-7 h-7 md:w-9 md:h-9 place-items-center ltr:rounded-tr rtl:rounded-tl ltr:rounded-br rtl:rounded-bl group-hover:bg-green-700 group-focus:bg-accent-600">+</span></button>
+                                class="grid transition-colors  duration-200 bg-gray-200 w-7 h-7 md:w-9 md:h-9 place-items-center rounded-sm group-hover:bg-green-700 group-focus:bg-accent-600">+</span></button>
 
                     </div>
                 </div>
                 <div
                     class="cart-type-neon border border-border-200 w-64 rounded h-full mr-3 overflow-hidden shadow-sm transition-all duration-200 hover:shadow transform hover:-translate-y-0.5 col-md-4">
                     <img src="/public/images/Bags.webp"
-                        class="product-img relative flex items-center justify-center cursor-pointer w-auto h-48 sm:h-64"
+                        class="product-img relative flex items-center w-full justify-center cursor-pointer  h-48 sm:h-64"
                         alt="">
                     <div class="product-descript p-3 bg-white md:p-6">
                         <h3>Balenciaga</h3> <br> <span>1 pc(s)</span><br>
@@ -210,14 +230,14 @@
                         <button
                             class="flex items-center justify-between  w-full text-xs transition-colors bg-gray-100 rounded group h-7 md:h-9 md:text-sm text-body-dark hover:bg-green-600 hover:border-accent hover:text-white focus:outline-none focus:bg-accent focus:border-accent focus:text-light"><span
                                 class="flex-1">Add</span><span
-                                class="grid transition-colors duration-200 bg-gray-200 w-7 h-7 md:w-9 md:h-9 place-items-center ltr:rounded-tr rtl:rounded-tl ltr:rounded-br rtl:rounded-bl group-hover:bg-green-700 group-focus:bg-accent-600">+</span></button>
+                                class="grid transition-colors  duration-200 bg-gray-200 w-7 h-7 md:w-9 md:h-9 place-items-center rounded-sm group-hover:bg-green-700 group-focus:bg-accent-600">+</span></button>
 
                     </div>
                 </div>
                 <div
                     class="cart-type-neon border border-border-200 w-64 rounded h-full  overflow-hidden shadow-sm transition-all duration-200 hover:shadow transform hover:-translate-y-0.5 col-md-4 mr-3">
                     <img src="/public/images/Bags.webp"
-                        class="product-img relative flex items-center justify-center cursor-pointer w-auto h-48 sm:h-64"
+                        class="product-img relative flex items-center w-full justify-center cursor-pointer  h-48 sm:h-64"
                         alt="">
                     <div class="product-descript p-3 bg-white md:p-6">
                         <h3>Balenciaga</h3> <br> <span>1 pc(s)</span><br>
@@ -226,14 +246,14 @@
                         <button
                             class="flex items-center justify-between  w-full text-xs transition-colors bg-gray-100 rounded group h-7 md:h-9 md:text-sm text-body-dark hover:bg-green-600 hover:border-accent hover:text-white focus:outline-none focus:bg-accent focus:border-accent focus:text-light"><span
                                 class="flex-1">Add</span><span
-                                class="grid transition-colors duration-200 bg-gray-200 w-7 h-7 md:w-9 md:h-9 place-items-center ltr:rounded-tr rtl:rounded-tl ltr:rounded-br rtl:rounded-bl group-hover:bg-green-700 group-focus:bg-accent-600">+</span></button>
+                                class="grid transition-colors  duration-200 bg-gray-200 w-7 h-7 md:w-9 md:h-9 place-items-center rounded-sm group-hover:bg-green-700 group-focus:bg-accent-600">+</span></button>
 
                     </div>
                 </div>
                 <div
                     class="cart-type-neon border border-border-200 w-64 rounded h-full  overflow-hidden shadow-sm transition-all duration-200 hover:shadow transform hover:-translate-y-0.5 col-md-4">
                     <img src="/public/images/Bags.webp"
-                        class="product-img relative flex items-center justify-center cursor-pointer w-auto h-48 sm:h-64"
+                        class="product-img relative flex items-center w-full justify-center cursor-pointer  h-48 sm:h-64"
                         alt="">
                     <div class="product-descript p-3 bg-white md:p-6">
                         <h3>Balenciaga</h3> <br> <span>1 pc(s)</span><br>
@@ -242,7 +262,7 @@
                         <button
                             class="flex items-center justify-between  w-full text-xs transition-colors bg-gray-100 rounded group h-7 md:h-9 md:text-sm text-body-dark hover:bg-green-600 hover:border-accent hover:text-white focus:outline-none focus:bg-accent focus:border-accent focus:text-light"><span
                                 class="flex-1">Add</span><span
-                                class="grid transition-colors duration-200 bg-gray-200 w-7 h-7 md:w-9 md:h-9 place-items-center ltr:rounded-tr rtl:rounded-tl ltr:rounded-br rtl:rounded-bl group-hover:bg-green-700 group-focus:bg-accent-600">+</span></button>
+                                class="grid transition-colors  duration-200 bg-gray-200 w-7 h-7 md:w-9 md:h-9 place-items-center rounded-sm group-hover:bg-green-700 group-focus:bg-accent-600">+</span></button>
 
                     </div>
                 </div>
@@ -253,7 +273,7 @@
       
    
     <button
-    class="hidden product-cart lg:flex flex-col fixed right-0 items-center  p-3 pt-3.5  top-1/2 -mt-12  z-40 shadow-900 rounded rounded-l-none bg-primary text-light text-sm font-semibold transition-colors duration-200 focus:outline-none hover:bg-accent-hover">
+    class="hidden product-cart lg:flex flex-col fixed right-0 items-center  p-3 pt-3.5  top-1/2 -mt-12  z-40 shadow-900 rounded rounded-l-none bg-emerald-600 text-light text-sm font-semibold transition-colors duration-200 focus:outline-none hover:bg-accent-hover">
     <span class="flex pb-0.5 justify-between"><i class="fa fa-thin fa-bag-shopping"></i><span class="flex ml-1">0 Item</span></span>
     <span class="bg-light rounded w-full py-2 px-2 text-primary mt-3">$0.00</span>
 </button>
@@ -276,6 +296,13 @@
         dialog.classList.add('hidden');
         overlay.classList.add('hidden');
     });
+
+    $(document).ready(function () {
+            $('#show').click(function () {
+                $('#menu').toggle("slide");
+            });
+        });
+
 </script>
 
 

@@ -10,7 +10,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 
@@ -23,20 +24,31 @@
                 <img src="/public/images/PickBazar logo.webp" class="logo relative h-10 w-32 overflow-hidden md:w-40"
                     alt="">
                 <div class="hidden ml-10 rtl:mr-10 ltr:mr-auto rtl:ml-auto xl:block">
-                    <div class="relative inline-block ltr:text-left rtl:text-right"> <select class="p-3 align-middle border-border-200 rounded"><i class=" fa-thin fa-apple-whole"></i><button
-                        class="flex items-center shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4 bg-light xl:border  border-border-200 xl:text-accent xl:min-w-150 rounded"
-                        type="button" aria-haspopup="true" aria-expanded="false"><span class="whitespace-nowrap"></i>Grocery
-                            <option><a href="/index.html">Grocery</a></option>
-                            <option><a href="/pages/bakery.html">Bakery</a></option>
-                            <option><a href="/pages/makeup.html">Makeup</a></option>
-                            <option><a href="/pages/bags.html">Bags</a></option>
-                            <option><a href="/pages/clothing.html">Clothing</a></option>
-                            <option><a href="/pages/furniture.html">Furniture</a></option>
-                            <option><a href="/pages/dailyneed.html">Daily Needs</a></option>
-                            <option><a href="/pages/book.html">Books</a></option>
-                        </span>
-                
-                    </button></select>
+                    <div class=" inline-block fixed -mt-5">
+                        <div class=" align-middle border-border-200 w-full rounded" id="show"><button
+                                class="flex relative items-center  shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4 bg-white xl:border active:fixed-top border-border-200 xl:text-navbtn xl:min-w-150 rounded gap-1"
+                                type="button"><i class="fa fa-thin fa-apple-whole"></i> Grocery <i
+                                    class="fa fa-thin fa-caret-down"></i></button></div>
+                        <div class="hidden p-2 gap-3 drop-shadow-lg bg-white mt-1 text-sm font-semibold" id="menu">
+                            <ul>
+                                <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        href="/index.html">Grocery</a></li>
+                                <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        href="/pages/bakery.html">Bakery</a></li>
+                                <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        href="/pages/makeup.html">Makeup</a></li>
+                                <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        href="/pages/bags.html">Bags</a></li>
+                                <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        href="/pages/clothing.html">Clothing</a></li>
+                                <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        href="/pages/furniture.html">Furniture</a></li>
+                                <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        href="/pages/dailyneed.html">Daily Needs</a></li>
+                                <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        href="/pages/book.html">Books</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -53,12 +65,12 @@
                         href="/pages/contact.html">Contact</a></li>
                 <div class=" flex items-center space-x-4  rtl:space-x-reverse"><a  href="/pages/login.html" target="_blank"><button
                         class="nav-btn items-center justify-center 
-                    font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-sm bg-primary"
+                    font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-sm bg-emerald-600"
                        >Become a
                         Seller</button></a>
                     <li><button data-variant="normal" id="open"
                             class="nav-btn items-center justify-center 
-                             font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-sm bg-primary">Join</button>
+                             font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-sm bg-emerald-600">Join</button>
                     </li>
                 </div>
             </ul>
@@ -91,13 +103,13 @@
                     autocomplete="off" autocorrect="off">
             </div>
             <button
-                class="inline-flex items-center justify-center flex-shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 bg-primary text-light border border-transparent hover:bg-accent-hover px-5 py-0 h-12 w-full">Login</button>
+                class="inline-flex items-center justify-center flex-shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 bg-emerald-600 text-light border border-transparent hover:bg-accent-hover px-5 py-0 h-12 w-full">Login</button>
             <div
                 class="flex flex-col items-center justify-center relative text-sm text-heading mt-8 sm:mt-11 mb-6 sm:mb-8">
                 <hr class="w-full"><span class="absolute start-2/4 -top-2.5 px-2 -ms-4 bg-white">Or</span>
             </div>
             <button
-                class="inline-flex items-center justify-center flex-shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 bg-primary text-light border border-transparent !hover:bg-gray-600 px-5 py-0 h-12 w-full"><i
+                class="inline-flex items-center justify-center flex-shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 bg-emerald-600 text-light border border-transparent !hover:bg-gray-600 px-5 py-0 h-12 w-full"><i
                     class="fa-brands fa-google mr-1"></i>Login with Google</button>
             <button
                 class="inline-flex items-center justify-center flex-shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 bg-gray-500 text-light border border-transparent hover:bg-accent-hover px-5 py-0 h-12 w-full"><i
@@ -115,7 +127,7 @@
 
   
 <div class="min-h-screen pt-11 bg-light">
-    <div class="flex flex-col w-full max-w-6xl p-8 mx-auto pt-14">
+    <div class="flex flex-col w-full max-w-6xl  mx-auto pt-24">
         <h3 class="mb-8 text-3xl font-bold text-center text-heading">FAQ</h3>
         <div class="mx-auto w-full max-w-screen-lg">
             <div class="border border-solid border-border-200 bg-white rounded mb-2.5 transition-all hover:border-border-base shadow-sm">
@@ -155,6 +167,11 @@
     <!-- FAQ ends -->
 
     <script>
+        $(document).ready(function () {
+            $('#show').click(function () {
+                $('#menu').toggle("slide");
+            });
+        });
         var openButton = document.getElementById('open');
         var dialog = document.getElementById('dialog');
         var closeButton = document.getElementById('close');

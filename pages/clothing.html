@@ -11,35 +11,43 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body class="body m-0 p-0 font-sans,font-serif w-full">
     <!-- Header start -->
-    <div class="header h-20 fixed z-50 w-full">
+    <div class="header h-20  fixed z-50 w-full">
         <nav
             class="sticky flex justify-between items-center w-full h-14 md:h-16 lg:h-22 px-4 lg:px-8 py-5 z-50 bg-light border-b border-border-200 shadow-sm transition-transform duration-300 transform-gpu lg:sticky lg:bg-transparent lg:shadow-none lg:border-0">
             <div class="header flex items-center w-full justify-center lg:w-auto">
                 <img src="/public/images/PickBazar logo.webp" class="logo relative h-10 w-32 overflow-hidden md:w-40"
                     alt="">
                 <div class="hidden ml-10 rtl:mr-10 ltr:mr-auto rtl:ml-auto xl:block">
-                    <div class="relative inline-block ltr:text-left rtl:text-right"> <select
-                            class="p-3 align-middle border-border-200 rounded"><i
-                                class=" fa-thin fa-apple-whole"></i><button
-                                class="flex items-center shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4 bg-light xl:border  border-border-200 xl:text-accent xl:min-w-150 rounded"
-                                type="button" aria-haspopup="true" aria-expanded="false"><span
-                                    class="whitespace-nowrap"></i>Clothing
-                                    <option><a href="/pages/bakery.html">Clothing</a></option>
-                                    <option><a href="/pages/makeup.html">Makeup</a></option>
-                                    <option><a href="/pages/bags.html">Bags</a></option>
-                                    <option><a href="/index.html">Grocery</a></option>
-                                    <option><a href="/pages/clothing.html">Bakery</a></option>
-                                    <option><a href="/pages/furniture.html">Furniture</a></option>
-                                    <option><a href="/pages/dailyneed.html">Daily Needs</a></option>
-                                    <option><a href="/pages/book.html">Books</a></option>
-                                </span>
-
-                            </button></select>
+                    <div class=" inline-block fixed -mt-5">
+                        <div class=" align-middle border-border-200 w-full rounded" id="show"><button
+                                class="flex relative items-center  shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4 bg-white xl:border active:fixed-top border-border-200 xl:text-navbtn xl:min-w-150 rounded gap-1"
+                                type="button"><i class="fa fa-thin fa-apple-whole"></i>Clothing<i
+                                    class="fa fa-thin fa-caret-down"></i></button></div>
+                        <div class="hidden p-2 gap-3 drop-shadow-lg bg-white mt-1 text-sm font-semibold" id="menu">
+                            <ul>
+                                <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        href="/index.html">Grocery</a></li>
+                                <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        href="/pages/bakery.html">Bakery</a></li>
+                                <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        href="/pages/makeup.html">Makeup</a></li>
+                                <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        href="/pages/bags.html">Bags</a></li>
+                                <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        href="/pages/clothing.html">Clothing</a></li>
+                                <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        href="/pages/furniture.html">Furniture</a></li>
+                                <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        href="/pages/dailyneed.html">Daily Needs</a></li>
+                                <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        href="/pages/book.html">Books</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -54,17 +62,17 @@
                         href="/pages/contact.html">Contact</a></li>
                 <div class=" flex items-center space-x-4  rtl:space-x-reverse"><a href="/pages/login.html" target="_blank"><button
                             class="nav-btn items-center justify-center 
-                    font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-sm bg-primary">Become
+                    font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-sm bg-emerald-600">Become
                             a
                             Seller</button></a>
                     <li><button data-variant="normal" id="open"
                             class="nav-btn items-center justify-center 
-                             font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-sm bg-primary">Join</button>
+                             font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-sm bg-emerald-600">Join</button>
                     </li>
                 </div>
             </ul>
         </nav>
-    </div>
+    </div><br><br><br>
     <!-- Header ends -->
     <div class="hidden fixed bg-opacity-50 bg-slate-600 bg-fixed z-50 w-full h-screen" id="dialog">
         <div class="h-screen w-full" id="close"></div>
@@ -92,13 +100,13 @@
                     autocomplete="off" autocorrect="off">
             </div>
             <button
-                class="inline-flex items-center justify-center flex-shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 bg-primary text-light border border-transparent hover:bg-accent-hover px-5 py-0 h-12 w-full">Login</button>
+                class="inline-flex items-center justify-center flex-shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 bg-emerald-600 text-light border border-transparent hover:bg-accent-hover px-5 py-0 h-12 w-full">Login</button>
             <div
                 class="flex flex-col items-center justify-center relative text-sm text-heading mt-8 sm:mt-11 mb-6 sm:mb-8">
                 <hr class="w-full"><span class="absolute start-2/4 -top-2.5 px-2 -ms-4 bg-white">Or</span>
             </div>
             <button
-                class="inline-flex items-center justify-center flex-shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 bg-primary text-light border border-transparent !hover:bg-gray-600 px-5 py-0 h-12 w-full"><i
+                class="inline-flex items-center justify-center flex-shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 bg-emerald-600 text-light border border-transparent !hover:bg-gray-600 px-5 py-0 h-12 w-full"><i
                     class="fa-brands fa-google mr-1"></i>Login with Google</button>
             <button
                 class="inline-flex items-center justify-center flex-shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 bg-gray-500 text-light border border-transparent hover:bg-accent-hover px-5 py-0 h-12 w-full"><i
@@ -116,7 +124,7 @@
     <div class="relative w-full lg:space-y-10  hidden lg:table">
         <img src="/public/images/cloths-landing.webp" class=" h-screen w-screen border-b-0 " alt="">
         <div
-            class=" md:px-20  lg:space-y-10  hidden lg:table p-5 md:px-20 mt-8 absolute inset-0 w-full align-middle !pt-28 flex-col items-center justify-center  text-center lg:space-y-10">
+            class=" md:px-20  lg:space-y-10  hidden lg:table p-5  mt-8 absolute inset-0 w-full align-middle !pt-28 flex-col items-center justify-center  text-center">
             <h1 class="text-2xl lg:text-4xl xl:text-5xl tracking-tight text-heading font-bold">Shop your designer
                 dresses</h1>
             <p class="text-sm lg:text-base xl:text-lg text-heading">Ready to wear dresses tailored for you online. Hurry
@@ -130,7 +138,7 @@
                             class="search item-center flex h-full p-4 w-full appearance-none overflow-hidden truncate rounded-lg text-sm text-heading placeholder-gray-500 transition duration-300 ease-in-out focus:outline-none focus:ring-0 bg-light ltr:pl-6 rtl:pr-6 ltr:pr-14 rtl:pl-14 ltr:rounded-tr-none rtl:rounded-tl-none ltr:rounded-br-none rtl:rounded-bl-none  border ltr:border-r-0 rounded-r-none rtl:border-l-0 border-transparent focus:border-accent"
                             name="search" placeholder="Search your products from here" value="">
                         <button
-                            class="flex h-full min-w-[143px] w-2/5 items-center justify-center rounded-lg bg-primary px-8 font-semibold text-light transition-colors duration-200 hover:bg-green-700 focus:bg-accent-hover focus:outline-none  rounded-l-none">Search</button>
+                            class="flex h-full min-w-[143px] w-2/5 items-center justify-center rounded-lg bg-emerald-600 px-8 font-semibold text-light transition-colors duration-200 hover:bg-green-700 focus:bg-accent-hover focus:outline-none  rounded-l-none">Search</button>
                     </div>
                 </form>
             </div>
@@ -163,8 +171,7 @@
         <div class="relative inline-block ltr:text-left rtl:text-right"><button
                 class="flex items-center shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4 bg-white xl:border border-border-200 xl:text-accent xl:min-w-150 rounded"
                 id="headlessui-menu-button-2" type="button" aria-haspopup="true" aria-expanded="false"><span
-                    class="flex items-center justify-center w-5 h-5 ltr:mr-2 rtl:ml-2"></span><span
-                    class="whitespace-nowrap">clothing<i class="fa-solid fa-sort-down"></i></span></button></div>
+                    class="whitespace-nowrap px-3">clothing<i class="fa-solid fa-sort-down"></i></span></button></div>
     </div>
     <!-- products and catagories start -->
     <div class="flex border-t border-solid border-border-200 border-opacity-70">
@@ -279,12 +286,12 @@
                 </div>
             </div>
             <div class="mt-8 flex justify-center lg:mt-12"><button data-variant="normal"
-                class="inline-flex items-center justify-center shrink-0  leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 bg-primary text-light border border-transparent hover:bg-accent-hover px-5 py-0 h-12  text-sm font-semibold md:text-base">Load
+                class="inline-flex items-center justify-center shrink-0  leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 bg-emerald-600 text-light border border-transparent hover:bg-accent-hover px-5 py-0 h-12  text-sm font-semibold md:text-base">Load
                 More</button></div>
         </div>
     </div>
     <button
-        class="hidden product-cart lg:flex flex-col fixed right-0 items-center  p-3 pt-3.5  top-1/2 -mt-12  z-40 shadow-900 rounded rounded-l-none bg-primary text-light text-sm font-semibold transition-colors duration-200 focus:outline-none hover:bg-accent-hover">
+        class="hidden product-cart lg:flex flex-col fixed right-0 items-center  p-3 pt-3.5  top-1/2 -mt-12  z-40 shadow-900 rounded rounded-l-none bg-emerald-600 text-light text-sm font-semibold transition-colors duration-200 focus:outline-none hover:bg-accent-hover">
         <span class="flex pb-0.5 justify-between"><i class="fa fa-thin fa-bag-shopping"></i><span class="flex ml-1">0
                 Item</span></span>
         <span class="bg-light rounded w-full py-2 px-2 text-primary mt-3">$0.00</span>
@@ -306,6 +313,12 @@
             dialog.classList.add('hidden');
             overlay.classList.add('hidden');
         });
+        $(document).ready(function () {
+            $('#show').click(function () {
+                $('#menu').toggle("slide");
+            });
+        });
+
     </script>
 
 </body>
