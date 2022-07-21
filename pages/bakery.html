@@ -135,7 +135,7 @@
     <!-- Hero section start -->
     <div class="relative h-screem 2xl:h-full h-full  hidden lg:table">
         <img src="/public/images/bakery-landing.webp"
-            class="  xl:max-h-screen h-screen  w-screen border-b-0 bg-no-repeat  bg-cover overflow-hidden " alt="">
+            class="  xl:max-h-screen h-screen  w-screen border-b-0 bg-no-repeat  object-cover overflow-hidden " alt="">
         <div class=" md:px-20   hidden lg:table p-5   absolute inset-0 w-full  m-auto  text-center lg:space-y-10">
             <h1 class="text-2xl lg:text-4xl xl:text-5xl tracking-tight text-heading font-bold">Groceries Delivered in 90
                 Minute</h1>
@@ -208,12 +208,11 @@
         </div>
 
     </div>
-    </div>
     <!-- products  start -->
     <div class="flex border-t border-solid border-border-200 border-opacity-70">
         <div class="products w-full bg-light pb-8 lg:p-6   grid-cols-2  gap-5 ">
             <div
-                class="product-card  gap-3 p-5 justify-around grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-8 xl:grid-cols-4 overflow-hidden ">
+                class="product-card  gap-3 p-5 justify-around grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-8 xl:grid-cols-4 overflow-hidden ">
                 <div
                     class="cart-type-neon border border-border-200 xsm:w-full  rounded h-full  overflow-hidden shadow-sm transition-all duration-200 hover:shadow transform hover:-translate-y-0.5 ">
                     <img src="/public/images/bakery-priduct.webp"
@@ -374,7 +373,46 @@
                 $('#menu2').toggle("slide");
             });
         });
+        // set the default active slide to the first one
+        let slideIndex = 1;
+        showSlide(slideIndex);
 
+        // change slide with the prev/next button
+        function moveSlide(moveStep) {
+            showSlide(slideIndex += moveStep);
+        }
+
+        // change slide with the dots
+        function currentSlide(n) {
+            showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+            let i;
+            const slides = document.getElementsByClassName("slide");
+            const dots = document.getElementsByClassName('dot');
+
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+
+            // hide all slides
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.add('hidden');
+            }
+
+            // remove active status from all dots
+            for (i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('bg-yellow-500');
+                dots[i].classList.add('bg-green-600');
+            }
+
+            // show the active slide
+            slides[slideIndex - 1].classList.remove('hidden');
+
+            // highlight the active dot
+            dots[slideIndex - 1].classList.remove('bg-green-600');
+            dots[slideIndex - 1].classList.add('bg-yellow-500');
+        }
     </script>
 
 </body>
