@@ -11,62 +11,80 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <script src="/tailwind.config.js"></script>
+    <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body class="body m-0 p-0 font-sans,font-serif w-full">
     <!-- Header start -->
-    <div class="header h-20 fixed z-50 w-full">
+    <div class="header fixed z-50 w-full">
         <nav
-            class="sticky flex justify-between items-center w-full h-12 md:h-16 lg:h-22 px-4 lg:px-8 py-5 z-50 bg-light border-b border-border-200 shadow-sm transition-transform duration-300 lg:sticky lg:bg-transparent lg:shadow-none lg:border-0">
+            class="sticky flex justify-between items-center w-full h-12 md:h-16 lg:h-22 px-4 lg:px-8 py-7 z-50 bg-light  lg:sticky lg:shadow-none lg:border-0">
             <div class="header flex items-center w-full justify-center lg:w-auto">
                 <img src="/public/images/PickBazar logo.webp" href="/index.html"
                     class="logo relative h-6 px-2 overflow-hidden md:w-40" alt="">
                 <div class="hidden ml-10 xl:block">
-                    <div class="relative inline-block">
-                        <select class="p-3 align-middle border-border-200 rounded"><i
-                                class=" fa-thin fa-apple-whole"></i><button
-                                class="flex items-center shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4 bg-light xl:border  border-border-200 xl:text-accent xl:min-w-150 rounded"
-                                type="button" aria-haspopup="true" aria-expanded="false"><span
-                                    class="whitespace-nowrap"><i class="fa-thin fa-apple-whole"></i>Grocery
-                                    <option><a href="/index.html">Grocery</a></option>
-                                    <option><a href="/pages/bakery.html">Bakery</a></option>
-                                    <option><a href="/pages/makeup.html">Makeup</a></option>
-                                    <option><a href="/pages/bags.html">Bags</a></option>
-                                    <option><a href="/pages/clothing.html">Clothing</a></option>
-                                    <option><a href="/pages/furniture.html">Furniture</a></option>
-                                    <option><a href="/pages/dailyneed.html">Daily Needs</a></option>
-                                    <option><a href="/pages/book.html">Books</a></option>
-                                </span>
-                            </button>
-                        </select>
+                    <div class=" inline-block fixed -mt-5">
+                        <div class=" align-middle border-border-200 w-full rounded" id="show"><button
+                                class="flex relative items-center  shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4 bg-white xl:border active:fixed-top border-border-200 xl:text-navbtn xl:min-w-150 rounded gap-1 text-emerald-600"
+                                type="button"><i class="fa fa-thin fa-apple-whole"></i> Grocery <i
+                                    class="fa fa-thin fa-caret-down"></i></button></div>
+                        <div class="hidden p-2 gap-3  drop-shadow-lg bg-white mt-1 text-sm font-semibold" id="menu">
+                            <ul>
+                                <li class="hover:text-emerald-600"><i
+                                        class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        class="hover:text-emerald-600" href="/index.html">Grocery</a></li>
+                                <li class="hover:text-emerald-600"><i
+                                        class="fa fa-thin fa-apple-whole text-lg mr-3 "></i><a
+                                        class="hover:text-emerald-600" href="/pages/bakery.html">Bakery</a></li>
+                                <li class="hover:text-emerald-600"><i
+                                        class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        class="hover:text-emerald-600" href="/pages/makeup.html">Makeup</a></li>
+                                <li class="hover:text-emerald-600"><i
+                                        class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        class="hover:text-emerald-600" href="/pages/bags.html">Bags</a></li>
+                                <li class="hover:text-emerald-600"><i
+                                        class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        class="hover:text-emerald-600" href="/pages/clothing.html">Clothing</a></li>
+                                <li class="hover:text-emerald-600"><i
+                                        class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        class="hover:text-emerald-600" href="/pages/furniture.html">Furniture</a></li>
+                                <li class="hover:text-emerald-600"><i
+                                        class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        class="hover:text-emerald-600" href="/pages/dailyneed.html">Daily Needs</a></li>
+                                <li class="hover:text-emerald-600"><i
+                                        class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        class="hover:text-emerald-600" href="/pages/book.html">Books</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <ul class="dropdown-content items-center shrink-0 hidden lg:flex space-x-10 ">
-                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline focus:text-accent"
+                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline hover:text-accent hover:text-emerald-600"
                         href="/pages/shop.html">Shops</a></li>
-                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline focus:text-accent"
+                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline hover:text-accent hover:text-emerald-600"
                         href="/pages/offers.html">Offers</a></li>
-                <li><a class="font-normal text-heading  flex items-center transition duration-200 no-underline focus:text-accent"
+                <li><a class="font-normal text-heading  flex items-center transition duration-200 no-underline hover:text-accent hover:text-emerald-600"
                         href="/pages/faq.html">FAQ</a></li>
-                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline focus:text-accent"
+                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline hover:text-accent hover:text-emerald-600"
                         href="/pages/contact.html">Contact</a></li>
-                <div class=" flex items-center space-x-4"><a href="/pages/login.html"
-                        target="_blank"><button
+                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline hover:text-emerald-600"
+                        href="/pages/blog.html">Blog</a></li>
+                <div class=" flex items-center space-x-4"><a href="/pages/login.html" target="_blank"><button
                             class="nav-btn items-center justify-center 
                     font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-sm bg-emerald-600">Become
                             a
                             Seller</button></a>
                     <li><button data-variant="normal" id="open"
                             class="nav-btn items-center justify-center 
-                            font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent px-3 py-0 h-9 text-sm bg-navbtn">Join</button>
+                            font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent px-3 py-0 h-9 text-sm bg-emerald-600">Join</button>
                     </li>
                 </div>
             </ul>
         </nav>
-    </div><br><br><br>
+    </div>
     <!-- Header ends -->
     <div class="hidden fixed bg-opacity-50 bg-slate-600 bg-fixed top-0 z-50 w-full h-screen" id="dialog">
         <div class="h-screen w-full" id="close"></div>
@@ -86,7 +104,7 @@
             <div class="mb-4">
                 <div class="flex justify-between"><label for="Password"
                         class="block text-body-dark font-semibold text-sm leading-none mb-3">Password</label>
-                    <a class="text-xs text-primary transition-colors duration-200 focus:outline-none focus:text-accent-700 focus:font-semibold hover:text-primary-hover"
+                    <a class="text-xs text-emerald-600 transition-colors duration-200 focus:outline-none focus:text-accent-700 focus:font-semibold hover:text-emerald-600-hover"
                         href="">Forgot password?</a>
                 </div>
                 <input id="Password" name="Password" type="Password"
@@ -110,29 +128,31 @@
                 <hr class="w-full"><span class="absolute start-2/4 -top-2.5 px-2 -ms-4 bg-white">Or</span>
             </div>
             <div class="text-sm sm:text-base text-body text-center">Don't have any account? <a
-                    class="ms-1 underline text-primary font-semibold transition-colors duration-200 focus:outline-none hover:text-accent-hover focus:text-accent-700 hover:no-underline focus:no-underline"
+                    class="ms-1 underline text-emerald-600 font-semibold transition-colors duration-200 focus:outline-none hover:text-accent-hover focus:text-accent-700 hover:no-underline focus:no-underline"
                     href="/pages/login.html">Login</a></div>
         </div>
     </div>
     <!-- Hero section start -->
-    <div class="relative w-full lg:space-y-10  hidden lg:table">
-        <img src="/public/images/landing picture.webp" class=" h-auto w-screen border-b-0  md:h-full xl:h-full" alt="">
-        
-        <div class="hidden lg:table p-5 md:px-20 mt-8 absolute inset-0 w-full align-middle !pt-28 flex-col items-center justify-center  text-center lg:space-y-10">
-            <h1 class="text-2xl mt-16 lg:text-4xl xl:text-5xl tracking-tight text-heading font-bold">Groceries Delivered in 90
+    <div class="relative w-full  hidden lg:table">
+        <img src="/public/images/landing picture.webp"
+            class="h-screen w-screen 2xl:h-full border-b-0 md:h-full xl:h-full" alt="">
+
+        <div class="hidden lg:table md:px-20  absolute inset-0 m-auto text-center align-middle flex-col  lg:space-y-10">
+            <h1 class="text-2xl lg:text-4xl xl:text-5xl tracking-tight text-heading font-bold">Groceries Delivered in 90
                 Minute</h1>
             <p class="text-sm lg:text-base xl:text-lg text-heading">Get your healthy foods & snacks delivered at
                 your doorsteps all day everyday</p>
-            <div class="w-full">
-                <form class="w-full">
+            <div class="items-center justify-center">
+                <form class="w-full justify-center items-center ">
                     <div
-                        class="items-center justify-center w-3/5  inline-flex text-center  rounded md:rounded-lg h-14 shadow-900">
+                        class="items-center justify-center w-full lg:w-4/5  text-center inline-flex rounded md:rounded-lg h-14 shadow-900">
                         <label for="search" class="sr-only">search</label>
                         <input id="search" type="text" autocomplete="off"
-                            class="search item-center flex h-full p-4 w-full appearance-none overflow-hidden truncate rounded-lg text-sm text-heading placeholder-gray-500 transition duration-300 ease-in-out  bg-light  rounded-r-none border  border-transparent"
+                            class="search item-center flex h-full p-4 w-[625px] appearance-none overflow-hidden truncate rounded-lg text-sm text-heading placeholder-gray-500 transition duration-300 ease-in-out  bg-white shadow-lg  rounded-r-none border  border-transparent"
                             name="search" placeholder="Search your products from here" value="">
                         <button
-                            class="flex h-full min-w-[143px] w-2/5 items-center justify-center rounded-lg bg-emerald-600 px-8 font-semibold text-light transition-colors duration-200 rounded-l-none">Search</button>
+                            class="flex h-full w-[143px]  items-center justify-center rounded-lg bg-emerald-600 px-8 font-semibold text-light transition-colors duration-200 rounded-l-none"><i
+                                class="fa fa-thin fa-magnifying-glass mr-1"></i>Search</button>
                     </div>
                 </form>
             </div>
@@ -168,54 +188,74 @@
     </div>
     <!-- products and catagories start -->
     <div class="flex border-t border-solid border-border-200 border-opacity-70">
-        <aside class="lg:sticky fixed lg:top-22 h-full xl:w-72 hidden xl:block bg-light undefined">
-            <div class="max-h-full overflow-hidden flex-grow">
-                <div class="os-host bg-white" style="height:calc(100vh - 5.35rem)">
-                    <ul class="text-xs xl:py-8">
-                        <li class="py-1 rounded-md"><button
-                                class="flex items-center w-full py-2 ltr:text-left rtl:text-right outline-none text-body-dark font-semibold  focus:outline-none focus:ring-0 focus:text-accent transition-all ease-in-expo text-body-dark text-sm pl-5"><span><i
-                                        class="fa fa-thin fa-apple-whole"></i> Fruits
-                                    and Vegetables</span></button></li>
-                        <li class="py-1 rounded-md"><button
-                                class="flex items-center w-full py-2 ltr:text-left rtl:text-right outline-none text-body-dark font-semibold  focus:outline-none focus:ring-0 focus:text-accent transition-all ease-in-expo text-body-dark text-sm pl-5"><span><i
-                                        class="fa fa-thin fa-meat"></i> Meat
-                                    & Fish</span></button></li>
-                        <li class="py-1 rounded-md"><button
-                                class="flex items-center w-full py-2 ltr:text-left rtl:text-right outline-none text-body-dark font-semibold  focus:outline-none focus:ring-0 focus:text-accent transition-all ease-in-expo text-body-dark text-sm pl-5"><span><i
-                                        class="fa fa-thin fa-mug-hot"></i> Snacks</span></button></li>
-                        <li class="py-1 rounded-md"><button
-                                class="flex items-center w-full py-2 ltr:text-left rtl:text-right outline-none text-body-dark font-semibold  focus:outline-none focus:ring-0 focus:text-accent transition-all ease-in-expo text-body-dark text-sm pl-5"><span><i
-                                        class="fa fa-thin fa-bowl-food"></i> Pet
-                                    Care</span></button></li>
-                        <li class="py-1 rounded-md"><button
-                                class="flex items-center w-full py-2 ltr:text-left rtl:text-right outline-none text-body-dark font-semibold  focus:outline-none focus:ring-0 focus:text-accent transition-all ease-in-expo text-body-dark text-sm pl-5"><span><i
-                                        class="fa fa-thin fa-scanner-gun"></i> Home
-                                    and Cleansing</span></button></li>
-                        <li class="py-1 rounded-md"><button
-                                class="flex items-center w-full py-2 ltr:text-left rtl:text-right outline-none text-body-dark font-semibold  focus:outline-none focus:ring-0 focus:text-accent transition-all ease-in-expo text-body-dark text-sm pl-5"><span><i
-                                        class="fa fa-thin fa-prescription-bottle"></i> Dairy</span></button></li>
-                        <li class="py-1 rounded-md"><button
-                                class="flex items-center w-full py-2 ltr:text-left rtl:text-right outline-none text-body-dark font-semibold  focus:outline-none focus:ring-0 focus:text-accent transition-all ease-in-expo text-body-dark text-sm pl-5"><span><i
-                                        class="fa fa-thin fa-cauldron"></i> Cooking</span></button></li>
-                        <li class="py-1 rounded-md"><button
-                                class="flex items-center w-full py-2 ltr:text-left rtl:text-right outline-none text-body-dark font-semibold  focus:outline-none focus:ring-0 focus:text-accent transition-all ease-in-expo text-body-dark text-sm pl-5"><span><i
-                                        class="fa fa-thin fa-pie"></i> Breakfast</span></button></li>
-                        <li class="py-1 rounded-md"><button
-                                class="flex items-center w-full py-2 ltr:text-left rtl:text-right outline-none text-body-dark font-semibold  focus:outline-none focus:ring-0 focus:text-accent transition-all ease-in-expo text-body-dark text-sm pl-5"><span><i
-                                        class="fa fa-thin fa-champagne-glass"></i> Beverage</span><span
-                                    class="ltr:ml-auto rtl:mr-auto"></button></li>
-                        <li class="py-1 rounded-md"><button
-                                class="flex items-center w-full py-2 ltr:text-left rtl:text-right outline-none text-body-dark font-semibold  focus:outline-none focus:ring-0 focus:text-accent transition-all ease-in-expo text-body-dark text-sm pl-5"><span>Health
-                                    & Beauty</span></button></li>
+        <aside class="lg:sticky fixed lg:top-22 h-full xl:w-72 hidden xl:block undefined">
+
+            <div class="inline-block">
+                <div class=" align-middle  w-full " id="show1"><button
+                        class="flex relative items-center w-full shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4   active:fixed-top xl:min-w-150 focus:text-emerald-600 gap-3"
+                        type="button"><i class="fa fa-thin fa-apple-whole"></i>Fruits & Vegetables<i
+                            class="fa fa-thin fa-caret-down"></i></button></div>
+                <div class="hidden p-1 gap-3 mx-4 bg-white mt-1 text-sm font-semibold" id="menu1">
+                    <ul>
+                        <li><a href="#products">Fruits</a></li>
+                        <li><a href="#products">Vegetables</a></li>
+                    </ul>
+                </div>
+                <div class=" align-middle  w-full" id="show2"><button
+                        class="flex relative items-center w-full shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4   active:fixed-top  xl:min-w-150  focus:text-emerald-600  gap-3"
+                        type="button"><i class="fa fa-thin fa-apple-whole"></i>Meat & Fish<i
+                            class="fa fa-thin fa-caret-down"></i></button></div>
+                <div class="hidden p-1 gap-5 mx-4 bg-white mt-1 text-sm font-semibold" id="menu2">
+                    <ul>
+                        <li><a href="#products">Fresh Fish</a></li>
+                        <li><a href="#products">Meat</a></li>
+                    </ul>
+                </div>
+                <div class=" align-middle  w-full" id="show3"><button
+                        class="flex relative items-center w-full shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4   active:fixed-top  xl:min-w-150  focus:text-emerald-600  gap-3"
+                        type="button"><i class="fa fa-thin fa-apple-whole"></i>Snacks<i
+                            class="fa fa-thin fa-caret-down"></i></button></div>
+                <div class="hidden p-1 gap-5 mx-4 bg-white mt-1 text-sm font-semibold" id="menu3">
+                    <ul>
+                        <li><a href="#products">Nuts & Biscuits</a></li>
+                        <li><a href="#products">Chocolates</a></li>
+                        <li><a href="#products">Crisps</a></li>
+                        <li><a href="#products">Noodles & Pasta</a></li>
+                    </ul>
+                </div>
+                <div class=" align-middle  w-full" id="show3"><button
+                        class="flex relative items-center w-full shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4   active:fixed-top  xl:min-w-150  focus:text-emerald-600  gap-3"
+                        type="button"><i class="fa fa-thin fa-apple-whole"></i>Snacks<i
+                            class="fa fa-thin fa-caret-down"></i></button></div>
+                <div class="hidden p-1 gap-5 mx-4 bg-white mt-1 text-sm font-semibold" id="menu3">
+                    <ul>
+                        <li><a href="#products">Nuts & Biscuits</a></li>
+                        <li><a href="#products">Chocolates</a></li>
+                        <li><a href="#products">Crisps</a></li>
+                        <li><a href="#products">Noodles & Pasta</a></li>
+                    </ul>
+                </div>
+                <div class=" align-middle  w-full" id="show3"><button
+                        class="flex relative items-center w-full shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4   active:fixed-top  xl:min-w-150  focus:text-emerald-600 justify-between gap-2"
+                        type="button"><i class="fa fa-thin fa-apple-whole"></i>Home and cleansing<i
+                            class="fa fa-thin fa-caret-down"></i></button></div>
+                <div class="hidden p-1 gap-5 mx-4 bg-white mt-1 text-sm font-semibold" id="menu3">
+                    <ul>
+                        <li><a href="#products">Air Freshner</a></li>
+                        <li><a href="#products">Cleaning Products</a></li>
+                        <li><a href="#products">Kitchen Accessories</a></li>
+                        <li><a href="#products">Laundry</a></li>
                     </ul>
                 </div>
             </div>
+
+
         </aside>
         <div class="products w-full bg-light pb-8 lg:p-6   grid-cols-2    ">
-            <div
-                class="product-card gap-4  p-4 justify-around col-md-12 sm:col grid md:grid-cols-3 lg:grid-cols-4 grid-cols-1 overflow-hidden mr-4 ">
+            <div id="products"
+                class="product-card  md:gap-5 p-3  justify-around grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 xl:grid-cols-4 overflow-hidden ">
                 <div
-                    class="cart-type-neon border border-border-200 w-64 rounded h-full mr-3 overflow-hidden shadow-sm transition-all duration-200 hover:shadow transform hover:-translate-y-0.5 col-md-4">
+                    class="cart-type-neon border border-border-200 w-full rounded h-full mr-3 overflow-hidden shadow-sm transition-all duration-200 hover:shadow transform hover:-translate-y-0.5 col-md-4">
                     <img src="./public/images/Apples.webp"
                         class="relative flex items-center w-full justify-center cursor-pointer  h-48 sm:h-64" alt="">
                     <div class="product-descript p-3 bg-white md:p-6">$1.60 <span class="span line-through">$2.00</span>
@@ -228,7 +268,7 @@
                     </div>
                 </div>
                 <div
-                    class="cart-type-neon border border-border-200 w-64 rounded h-full mr-3 overflow-hidden shadow-sm transition-all duration-200 hover:shadow transform hover:-translate-y-0.5 col-md-4">
+                    class="cart-type-neon border border-border-200  w-full rounded h-full mr-3 overflow-hidden shadow-sm transition-all duration-200 hover:shadow transform hover:-translate-y-0.5 col-md-4">
                     <img src="./public/images/Apples.webp"
                         class="relative flex items-center justify-center cursor-pointer w-full h-48 sm:h-64" alt="">
                     <div class="product-descript p-3 bg-white md:p-6">$1.60 <span class="span line-through">$2.00</span>
@@ -241,7 +281,7 @@
                     </div>
                 </div>
                 <div
-                    class="cart-type-neon border border-border-200 w-64 rounded h-full  overflow-hidden shadow-sm transition-all duration-200 hover:shadow transform hover:-translate-y-0.5 col-md-4 mr-3">
+                    class="cart-type-neon border border-border-200 w-full rounded h-full  overflow-hidden shadow-sm transition-all duration-200 hover:shadow transform hover:-translate-y-0.5 col-md-4 mr-3">
                     <img src="./public/images/Apples.webp"
                         class="relative flex items-center justify-center cursor-pointer w-full h-48 sm:h-64" alt="">
                     <div class="product-descript p-3 bg-white md:p-6">$1.60 <span class="span line-through">$2.00</span>
@@ -254,7 +294,20 @@
                     </div>
                 </div>
                 <div
-                    class="cart-type-neon border border-border-200 w-64 rounded h-full  overflow-hidden shadow-sm transition-all duration-200 hover:shadow transform hover:-translate-y-0.5 col-md-4">
+                    class="cart-type-neon border border-border-200 w-full rounded h-full  overflow-hidden shadow-sm transition-all duration-200 hover:shadow transform hover:-translate-y-0.5 col-md-4">
+                    <img src="./public/images/Apples.webp"
+                        class="relative flex items-center justify-center cursor-pointer w-full h-48 sm:h-64" alt="">
+                    <div class="product-descript p-3 bg-white md:p-6">$1.60 <span class="span line-through">$2.00</span>
+                        <br>
+                        <h3>Apples</h3><br>
+                        <button
+                            class="flex items-center justify-between  w-full text-xs transition-colors bg-gray-100 rounded group h-7 md:h-9 md:text-sm text-body-dark hover:bg-green-600 hover:border-accent hover:text-white focus:outline-none focus:bg-accent focus:border-accent focus:text-light"><span
+                                class="flex-1">Add</span><span
+                                class="grid transition-colors duration-200 bg-gray-200 w-7 h-7 md:w-9 md:h-9 place-items-center rounded-r-md group-hover:bg-green-700 group-focus:bg-accent-600">+</span></button>
+                    </div>
+                </div>
+                <div
+                    class="cart-type-neon border border-border-200 w-full rounded h-full  overflow-hidden shadow-sm transition-all duration-200 hover:shadow transform hover:-translate-y-0.5 col-md-4">
                     <img src="./public/images/Apples.webp"
                         class="relative flex items-center justify-center cursor-pointer w-full h-48 sm:h-64" alt="">
                     <div class="product-descript p-3 bg-white md:p-6">$1.60 <span class="span line-through">$2.00</span>
@@ -272,12 +325,11 @@
                     More</button></div>
         </div>
     </div>
-    <button
-        class="hidden product-cart lg:flex flex-col items-center justify-center px-3 py-3.5  fixed top-1/2 z-40 shadow-900 rounded 
+    <button class="hidden product-cart lg:flex flex-col items-center justify-center px-3 py-3.5  fixed top-1/2 z-40 shadow-900 rounded 
          bg-emerald-600 right-0 text-light text-sm font-semibold ">
         <span class="flex pb-0.5 items-center"><i class="fa fa-thin fa-bag-shopping"></i><span class="flex ml-1">0
                 Item</span></span>
-        <span class="bg-light rounded w-full py-2 px-2 text-primary mt-3">$0.00</span>
+        <span class="bg-light rounded w-full py-2 px-2 text-emerald-600 mt-3">$0.00</span>
     </button>
 
 
@@ -297,6 +349,32 @@
         closeButton.addEventListener('click', function () {
             dialog.classList.add('hidden');
             overlay.classList.add('hidden');
+        });
+        $(document).ready(function () {
+            $('#show').click(function () {
+                $('#menu').toggle("slide");
+            });
+        });
+
+        $(document).ready(function () {
+            $('#show1').click(function () {
+                $('#menu1').toggle("slide");
+            });
+        });
+        $(document).ready(function () {
+            $('#show2').click(function () {
+                $('#menu2').toggle("slide");
+            });
+        });
+        $(document).ready(function () {
+            $('#show3').click(function () {
+                $('#menu3').toggle("slide");
+            });
+        });
+        $(document).ready(function () {
+            $('#show4').click(function () {
+                $('#menu4').toggle("slide");
+            });
         });
     </script>
 

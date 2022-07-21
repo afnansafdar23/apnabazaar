@@ -11,78 +11,75 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body class="body m-0 p-0 font-sans,font-serif w-full">
     <!-- Header start -->
-    <div class="header h-20 top-0 fixed z-50 w-full">
+    <div class="header h-20 fixed z-50 top-0 w-full">
         <nav
-            class="sticky flex justify-between items-center w-full h-14 md:h-16 lg:h-22 px-4 lg:px-8 py-5 z-50 bg-light border-b border-border-200 shadow-sm transition-transform duration-300 transform-gpu lg:sticky lg:bg-transparent lg:shadow-none lg:border-0">
-            <div class="header flex items-center w-full justify-center lg:w-auto">
-                <img src="/public/images/PickBazar logo.webp" class="logo relative h-10 w-32 overflow-hidden md:w-40"
+            class="sticky flex justify-between items-center w-full h-12 md:h-16 lg:h-22 px-4 lg:px-8 py-7 z-50 lg:sticky bg-white">
+            <div class="header flex items-center w-full justify-center  lg:w-auto">
+                <img src="/public/images/PickBazar logo.webp" class="logo relative px-2 overflow-hidden w-36 md:w-40"
                     alt="">
-
+                   
             </div>
-            <ul class="dropdown-content items-center shrink-0 hidden lg:flex space-x-10 rtl:space-x-reverse">
-                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline hover:text-accent focus:text-accent"
-                        href="/pages/shop.html">Shops</a></li>
-                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline hover:text-accent focus:text-accent"
-                        href="/pages/offers.html">Offers</a></li>
-                <li><a class="font-normal text-heading  flex items-center transition duration-200 no-underline hover:text-accent focus:text-accent"
-                        href="/pages/faq.html">FAQ</a></li>
-                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline hover:text-accent focus:text-accent"
-                        href="/pages/contact.html">Contact</a></li>
-
+            <ul class="dropdown-content items-center shrink-0 hidden lg:flex space-x-7 rtl:space-x-reverse">
+                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline hover:text-accent hover:text-emerald-600"
+                    href="/pages/shop.html">Shops</a></li>
+            <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline hover:text-accent hover:text-emerald-600"
+                    href="/pages/offers.html">Offers</a></li>
+            <li><a class="font-normal text-heading  flex items-center transition duration-200 no-underline hover:text-accent hover:text-emerald-600"
+                    href="/pages/faq.html">FAQ</a></li>
+            <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline hover:text-accent hover:text-emerald-600"
+                    href="/pages/contact.html">Contact</a></li>
+                    <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline hover:text-emerald-600"
+                        href="/pages/blog.html">Blog</a></li>
             </ul>
             <div
-                class="items-center justify-center w-80 ml-16 inline-flex text-center  rounded md:rounded-lg h-14 shadow-900">
+                class="items-center justify-center hidden w-48 xl:w-64 lg:inline-flex text-center  rounded md:rounded-lg h-10 ">
                 <label for="search" class="sr-only">search</label>
                 <input id="search" type="text" autocomplete="off"
-                    class="search item-center flex h-full p-4 w-full appearance-none overflow-hidden truncate rounded-lg text-sm text-heading placeholder-gray-500 transition duration-300 ease-in-out focus:outline-none focus:ring-0 bg-light ltr:pl-6 rtl:pr-6 ltr:pr-14 rtl:pl-14 ltr:rounded-tr-none rtl:rounded-tl-none ltr:rounded-br-none rtl:rounded-bl-none  border ltr:border-r-0 rtl:border-l-0 border-transparent focus:border-accent "
+                    class="search item-center flex h-full p-4 w-full appearance-none overflow-hidden truncate rounded-lg text-sm text-heading placeholder-gray-500 transition duration-300 ease-in-out focus:outline-none focus:ring-0 ltr:rounded-tr-none rtl:rounded-tl-none ltr:rounded-br-none rtl:rounded-bl-none  border ltr:border-r-0 rtl:border-l-0 border-transparent focus:border-accent "
                     name="search" placeholder="Search (type atleast 3 characters)" value="">
 
             </div>
-            <div class="hidden ml-10 rtl:mr-10 ltr:mr-auto rtl:ml-auto xl:block">
+            <div class="hidden lg:block">
                 <div class=" inline-block fixed -mt-5">
-                    <div class=" align-middle border-border-200 w-full rounded" id="show"><button
-                            class="flex relative items-center  shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4 bg-white xl:border active:fixed-top border-border-200 xl:text-navbtn xl:min-w-150 rounded gap-1"
-                            type="button"><i class="fa fa-thin fa-apple-whole"></i>Book<i
+                    <div class=" align-middle  w-full rounded" id="show"><button
+                            class="flex relative items-center shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4 bg-white xl:border active:fixed-top  xl:min-w-150  rounded gap-1 text-emerald-600"
+                            type="button"><i class="fa fa-thin fa-apple-whole"></i>Books<i
                                 class="fa fa-thin fa-caret-down"></i></button></div>
                     <div class="hidden p-2 gap-3 drop-shadow-lg bg-white mt-1 text-sm font-semibold" id="menu">
                         <ul>
-                            <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
-                                    href="/index.html">Grocery</a></li>
-                            <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
-                                    href="/pages/bakery.html">Bakery</a></li>
-                            <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
-                                    href="/pages/makeup.html">Makeup</a></li>
-                            <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
-                                    href="/pages/bags.html">Bags</a></li>
-                            <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
-                                    href="/pages/clothing.html">Clothing</a></li>
-                            <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
-                                    href="/pages/furniture.html">Furniture</a></li>
-                            <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
-                                    href="/pages/dailyneed.html">Daily Needs</a></li>
-                            <li><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
-                                    href="/pages/book.html">Books</a></li>
+                            <li class="hover:text-emerald-600"><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a class="hover:text-emerald-600"
+                                href="/index.html">Grocery</a></li>
+                        <li class="hover:text-emerald-600"><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a class="hover:text-emerald-600"
+                                href="/pages/bakery.html">Bakery</a></li>
+                        <li class="hover:text-emerald-600"><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a class="hover:text-emerald-600"
+                                href="/pages/makeup.html">Makeup</a></li>
+                        <li class="hover:text-emerald-600"><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a class="hover:text-emerald-600"
+                                href="/pages/bags.html">Bags</a></li>
+                        <li class="hover:text-emerald-600"><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a class="hover:text-emerald-600"
+                                href="/pages/clothing.html">Clothing</a></li>
+                        <li class="hover:text-emerald-600"><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a class="hover:text-emerald-600"
+                                href="/pages/furniture.html">Furniture</a></li>
+                        <li class="hover:text-emerald-600"><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a class="hover:text-emerald-600"
+                                href="/pages/dailyneed.html">Daily Needs</a></li>
+                        <li class="hover:text-emerald-600"><i class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a class="hover:text-emerald-600"
+                                href="/pages/book.html">Books</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <button class="hidden product-cart lg:flex relative text-emerald-600 ml-24"><i class="fa fa-thin fa-bag-shopping text-lg"></i></button>
-            <div class=" flex items-center space-x-4  rtl:space-x-reverse"><a href="/pages/login.html" target="_blank"><button
+            <div class="hidden lg:flex items-center space-x-4 ml-32 rtl:space-x-reverse "><a href="/pages/login.html" target="_blank"><button class="nav-btn items-center justify-center 
+                font-semibold w-auto flex rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-xs xl:text-sm bg-emerald-600">Become a
+                Seller</button></a>
+            <button data-variant="normal"id="open"
                     class="nav-btn items-center justify-center 
-                font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-sm bg-emerald-600">Become
-                    a
-                    Seller</button></a>
-                <button data-variant="normal" id="open"
-                    class="nav-btn items-center justify-center 
-                     font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-sm bg-emerald-600">Join</button>
-
-            </div>
+                     font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-xs xl:text-sm bg-emerald-600">Join</button>
+            
+        </div>
         </nav>
     </div>
     <!-- Header ends -->
@@ -104,7 +101,7 @@
             <div class="mb-4">
                 <div class="flex justify-between"><label for="Password"
                         class="block text-body-dark font-semibold text-sm leading-none mb-3">Password</label>
-                    <a class="text-xs text-primary transition-colors duration-200 focus:outline-none focus:text-accent-700 focus:font-semibold hover:text-primary-hover"
+                    <a class="text-xs text-emerald-600 transition-colors duration-200 focus:outline-none focus:text-accent-700 focus:font-semibold hover:text-emerald-600-hover"
                         href="">Forgot password?</a>
                 </div>
                 <input id="Password" name="Password" type="Password"
@@ -128,15 +125,15 @@
                 <hr class="w-full"><span class="absolute start-2/4 -top-2.5 px-2 -ms-4 bg-white">Or</span>
             </div>
             <div class="text-sm sm:text-base text-body text-center">Don't have any account? <a
-                    class="ms-1 underline text-primary font-semibold transition-colors duration-200 focus:outline-none hover:text-accent-hover focus:text-accent-700 hover:no-underline focus:no-underline"
+                    class="ms-1 underline text-emerald-600 font-semibold transition-colors duration-200 focus:outline-none hover:text-accent-hover focus:text-accent-700 hover:no-underline focus:no-underline"
                     href="/pages/login.html">Login</a></div>
         </div>
     </div>
     <!-- Hero section start -->
-    <div class="block w-full  pt-32 lg:mt-6 xl:overflow-hidden ltr:xl:pl-0 ltr:xl:pr-5 rtl:xl:pr-0 rtl:xl:pl-5">
-        <div class=" swiper swiper-initialized swiper-horizontal   swiper-pointer-events">
+    <div class="block w-full mx-auto pt-16 lg:mt-6 xl:overflow-hidden ltr:xl:pl-0 ltr:xl:pr-5 rtl:xl:pr-0 rtl:xl:pl-5">
+        <div class=" swiper swiper-initialized swiper-horizontal items-center  swiper-pointer-events">
             <div
-                class="swiper-slide swiper-slide-duplicate overflow-hidden justify-center inline-flex swiper-slide-active">
+                class="swiper-slide swiper-slide-duplicate overflow-hidden mx-auto w-full justify-center inline-flex swiper-slide-active">
                 <img src="/public/images/BookCover.webp" class="relative w-3/4  h-full max-h-[240px] md:max-h-[450px]"
                     alt="">
                 <!-- <img src="/public/images/furniture-banner-2.webp" class="relative w-full h-full max-h-[240px] md:max-h-[450px]" alt=""> -->
@@ -149,10 +146,10 @@
     <!-- product heading ends -->
     <!-- products and catagories start -->
     <div class="products p-5 !pt-0 md:p-8 lg:p-12 2xl:p-16">
-        <div class="product-list grid grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 3xl:grid-cols-6">
-            <div class="product relative w-72 h-auto rounded-lg  shadow-downfall-sm transition-shadow hover:shadow-downfall-lg group"
+        <div class="product-list grid grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6">
+            <div class="product relative w-full h-auto rounded-lg  shadow-downfall-sm transition-shadow hover:shadow-downfall-lg group"
                 role="button">
-                <article class="product-card w-72 cart-type-radon h-auto flex flex-col overflow-hidden duration-200">
+                <article class="product-card w-full cart-type-radon h-auto flex flex-col overflow-hidden duration-200">
                     <img src="/public/images/book-product.webp" alt=""><a
                         class="text-sm md:text-base text-heading font-semibold transition-colors hover:text-orange-500"
                         title="Superhero & Aliens" href="">Superhero & Aliens</a><span
@@ -165,9 +162,9 @@
                     </div>
                 </article>
             </div>
-            <div class="product relative w-72 h-auto rounded-lg  shadow-downfall-sm transition-shadow hover:shadow-downfall-lg group"
+            <div class="product relative w-full h-auto rounded-lg  shadow-downfall-sm transition-shadow hover:shadow-downfall-lg group"
                 role="button">
-                <article class="product-card w-72 cart-type-radon h-auto flex flex-col overflow-hidden duration-200">
+                <article class="product-card w-full cart-type-radon h-auto flex flex-col overflow-hidden duration-200">
                     <img src="/public/images/book-product.webp" alt=""><a
                         class="text-sm md:text-base text-heading font-semibold transition-colors hover:text-orange-500"
                         title="Superhero & Aliens" href="">Superhero & Aliens</a><span
@@ -180,9 +177,9 @@
                     </div>
                 </article>
             </div>
-            <div class="product relative w-72 h-auto rounded-lg  shadow-downfall-sm transition-shadow hover:shadow-downfall-lg group"
+            <div class="product relative w-full h-auto rounded-lg  shadow-downfall-sm transition-shadow hover:shadow-downfall-lg group"
                 role="button">
-                <article class="product-card w-72 cart-type-radon h-auto flex flex-col overflow-hidden duration-200">
+                <article class="product-card w-full cart-type-radon h-auto flex flex-col overflow-hidden duration-200">
                     <img src="/public/images/book-product.webp" alt=""><a
                         class="text-sm md:text-base text-heading font-semibold transition-colors hover:text-orange-500"
                         title="Superhero & Aliens" href="">Superhero & Aliens</a><span
@@ -195,9 +192,9 @@
                     </div>
                 </article>
             </div>
-            <div class="product relative w-72 h-auto rounded-lg  shadow-downfall-sm transition-shadow hover:shadow-downfall-lg group"
+            <div class="product relative w-full h-auto rounded-lg  shadow-downfall-sm transition-shadow hover:shadow-downfall-lg group"
                 role="button">
-                <article class="product-card w-72 cart-type-radon h-auto flex flex-col overflow-hidden duration-200">
+                <article class="product-card w-full cart-type-radon h-auto flex flex-col overflow-hidden duration-200">
                     <img src="/public/images/book-product.webp" alt=""><a
                         class="text-sm md:text-base text-heading font-semibold transition-colors hover:text-orange-500"
                         title="Superhero & Aliens" href="">Superhero & Aliens</a><span
@@ -210,9 +207,9 @@
                     </div>
                 </article>
             </div>
-            <div class="product relative w-72 h-auto rounded-lg  shadow-downfall-sm transition-shadow hover:shadow-downfall-lg group"
+            <div class="product relative w-full h-auto rounded-lg  shadow-downfall-sm transition-shadow hover:shadow-downfall-lg group"
                 role="button">
-                <article class="product-card w-72 cart-type-radon h-auto flex flex-col overflow-hidden duration-200">
+                <article class="product-card w-full cart-type-radon h-auto flex flex-col overflow-hidden duration-200">
                     <img src="/public/images/book-product.webp" alt=""><a
                         class="text-sm md:text-base text-heading font-semibold transition-colors hover:text-orange-500"
                         title="Superhero & Aliens" href="">Superhero & Aliens</a><span
