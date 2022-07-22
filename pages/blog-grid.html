@@ -11,48 +11,67 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <script src="/tailwind.config.js"></script>
-
+    <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body class="body m-0 p-0 font-sans,font-serif w-full">
     <!-- Header start -->
-    <div class="header h-16 fixed z-50 w-full">
+    <div class="header fixed z-50 w-full">
         <nav
-            class="sticky flex justify-between items-center w-full h-14 md:h-16 lg:h-22 px-4 lg:px-8 py-5 z-50 bg-light border-b border-border-200 shadow-sm transition-transform duration-300 lg:sticky lg:bg-transparent lg:shadow-none lg:border-0">
+            class="sticky flex justify-between items-center w-full h-12 md:h-16 lg:h-22 px-4 lg:px-8 py-7 z-50 bg-light  lg:sticky lg:shadow-none lg:border-0">
             <div class="header flex items-center w-full justify-center lg:w-auto">
-                <a href="/index.html"> <img src="/public/images/PickBazar logo.webp"
-                        class="logo relative h-6 w-20 overflow-hidden md:w-40" alt=""></a>
+                <img src="/public/images/PickBazar logo.webp" href="/index.html"
+                    class="logo relative h-6 px-2 overflow-hidden md:w-40" alt="">
                 <div class="hidden ml-10 xl:block">
-                    <div class="relative inline-block">
-                        <select class="p-3 align-middle border-border-200 rounded"><i
-                                class=" fa-thin fa-apple-whole"></i><button
-                                class="flex items-center shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4 bg-light xl:border  border-border-200 xl:text-accent xl:min-w-150 rounded"
-                                type="button" aria-haspopup="true" aria-expanded="false"><span
-                                    class="whitespace-nowrap"><i class="fa-thin fa-apple-whole"></i>Grocery
-                                    <option><a href="/index.html">Grocery</a></option>
-                                    <option><a href="/pages/bakery.html">Bakery</a></option>
-                                    <option><a href="/pages/makeup.html">Makeup</a></option>
-                                    <option><a href="/pages/bags.html">Bags</a></option>
-                                    <option><a href="/pages/clothing.html">Clothing</a></option>
-                                    <option><a href="/pages/furniture.html">Furniture</a></option>
-                                    <option><a href="/pages/dailyneed.html">Daily Needs</a></option>
-                                    <option><a href="/pages/book.html">Books</a></option>
-                                </span>
-                            </button>
-                        </select>
+                    <div class=" inline-block fixed -mt-5">
+                        <div class=" align-middle border-border-200 w-full rounded" id="show"><button
+                                class="flex relative items-center  shrink-0 text-sm md:text-base font-semibold h-11 focus:outline-none text-heading xl:px-4 bg-white xl:border active:fixed-top border-border-200 xl:text-navbtn xl:min-w-150 rounded gap-1 text-emerald-600"
+                                type="button"><i class="fa fa-thin fa-apple-whole"></i> Grocery <i
+                                    class="fa fa-thin fa-caret-down"></i></button></div>
+                        <div class="hidden p-2 gap-3  drop-shadow-lg bg-white mt-1 text-sm font-semibold" id="menu">
+                            <ul>
+                                <li class="hover:text-emerald-600"><i
+                                        class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        class="hover:text-emerald-600" href="/index.html">Grocery</a></li>
+                                <li class="hover:text-emerald-600"><i
+                                        class="fa fa-thin fa-apple-whole text-lg mr-3 "></i><a
+                                        class="hover:text-emerald-600" href="/pages/bakery.html">Bakery</a></li>
+                                <li class="hover:text-emerald-600"><i
+                                        class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        class="hover:text-emerald-600" href="/pages/makeup.html">Makeup</a></li>
+                                <li class="hover:text-emerald-600"><i
+                                        class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        class="hover:text-emerald-600" href="/pages/bags.html">Bags</a></li>
+                                <li class="hover:text-emerald-600"><i
+                                        class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        class="hover:text-emerald-600" href="/pages/clothing.html">Clothing</a></li>
+                                <li class="hover:text-emerald-600"><i
+                                        class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        class="hover:text-emerald-600" href="/pages/furniture.html">Furniture</a></li>
+                                <li class="hover:text-emerald-600"><i
+                                        class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        class="hover:text-emerald-600" href="/pages/dailyneed.html">Daily Needs</a></li>
+                                <li class="hover:text-emerald-600"><i
+                                        class="fa fa-thin fa-apple-whole text-lg mr-3"></i><a
+                                        class="hover:text-emerald-600" href="/pages/book.html">Books</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <ul class="dropdown-content items-center shrink-0 hidden lg:flex space-x-10 ">
-                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline focus:text-accent"
+                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline hover:text-accent hover:text-emerald-600"
                         href="/pages/shop.html">Shops</a></li>
-                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline focus:text-accent"
+                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline hover:text-accent hover:text-emerald-600"
                         href="/pages/offers.html">Offers</a></li>
-                <li><a class="font-normal text-heading  flex items-center transition duration-200 no-underline focus:text-accent"
+                <li><a class="font-normal text-heading  flex items-center transition duration-200 no-underline hover:text-accent hover:text-emerald-600"
                         href="/pages/faq.html">FAQ</a></li>
-                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline focus:text-accent"
+                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline hover:text-accent hover:text-emerald-600"
                         href="/pages/contact.html">Contact</a></li>
+                <li><a class="font-normal text-heading flex items-center transition duration-200 no-underline hover:text-emerald-600"
+                        href="/pages/blog.html">Blog</a></li>
                 <div class=" flex items-center space-x-4"><a href="/pages/login.html" target="_blank"><button
                             class="nav-btn items-center justify-center 
                     font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-sm bg-emerald-600">Become
@@ -60,7 +79,7 @@
                             Seller</button></a>
                     <li><button data-variant="normal" id="open"
                             class="nav-btn items-center justify-center 
-                            font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent hover:bg-green-700 px-3 py-0 h-9 text-sm bg-emerald-600">Join</button>
+                            font-semibold  rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700 text-light border border-transparent px-3 py-0 h-9 text-sm bg-emerald-600">Join</button>
                     </li>
                 </div>
             </ul>
@@ -114,90 +133,229 @@
         </div>
     </div>
     <!-- Hero section start -->
-    <div class="w-full p-20 bg-light h-screen">
-        <div class="flex gap-4   items-center justify-center md:grid-cols-4 ">
-            <div class="bg-white py-2 rounded-xl w-full hover:shadow-xl  gap-2 mb-6 hover:-translate-y-0.5 cursor-pointer hover:delay-150">
-                <div class="overflow-hidden p-6 text-lg  lg:text-xl font-bold text-blue-600 hover:text-gray-400 text-center">
-                   <i class="fa fa-thin fa-file-lines hidden lg:block lg:text-3xl "></i><h1>Case Studies</h1>
-                </div>
-            </div> 
-            <div class="bg-white py-2 rounded-xl  w-full hover:shadow-xl gap-2  mb-6 hover:-translate-y-0.5 cursor-pointer hover:delay-150">
-                <div class="overflow-hidden p-6 text-lg  lg:text-xl font-bold text-blue-600 hover:text-gray-400 text-center">
-                   <i class="fa fa-thin fa-file-lines hidden lg:block lg:text-3xl"></i><h1>Case Studies</h1>
-                </div>
-            </div> 
-            <div class="bg-white py-2 rounded-xl  w-full hover:shadow-xl gap-2  mb-6 hover:-translate-y-0.5 cursor-pointer hover:delay-150">
-                <div class="overflow-hidden p-6 text-lg  lg:text-xl font-bold text-blue-600 hover:text-gray-400 text-center">
-                   <i class="fa fa-thin fa-file-lines hidden lg:block lg:text-3xl"></i><h1>Case Studies</h1>
-                </div>
-            </div> 
-            <div class="bg-white py-2 rounded-xl  w-full hover:shadow-xl gap-2  mb-6 hover:-translate-y-0.5 cursor-pointer hover:delay-150">
-                <div class="overflow-hidden p-6 text-lg  lg:text-xl font-bold text-blue-600 hover:text-gray-400 text-center">
-                   <i class="fa fa-thin fa-file-lines hidden lg:block lg:text-3xl"></i><h1>Case Studies</h1>
-                </div>
-            </div> 
-        </div>
-        <div class="w-full flex">
-        <div class="gap-4 w-2/3 flex grid-cols-2">
-            <div class="bg-white py-2 rounded-xl w-full hover:shadow-xl mb-6 hover:-translate-y-0.5 cursor-pointer hover:delay-150">
-                <div class="border-l-4 border-cyan-600 overflow-hidden p-2">
-                    <h2 class="text-black font-semibold cursor-pointer">A Marketer's Guide to Price Comparison
-                        Websites</h2>
-                    <div class="flex justify-between text-xs p-1 items-center text-gray-400">
-                        <div class="inline-grid xl:flex"><a href="">John Doe</a>
-                        </div>
-                        <div class="xl:flex items-center"><a href="">
-                                <small class="float-right  text-xs">April 16, 2020 .</small></a>
-                            <h3 class="font-muted"><i class="fa fa-thin fa-clock"></i>1 min</h3>
-                        </div>
-                    </div>
+    <div class="w-full  p-8  pt-16 md:p-28 bg-light h-full">
+        <div class="flex gap-2 items-center justify-center md:grid-cols-4 ">
+            <div
+                class="bg-white lg:py-2 rounded-xl w-full hover:shadow-xl  gap-2 mb-6 hover:-translate-y-0.5 cursor-pointer hover:delay-150">
+                <div
+                    class="overflow-hidden p-6 text-sm  lg:text-xl lg:font-bold lg:text-blue-600 text-gray-400 font-semibold   hover:text-gray-400 text-center">
+                    <i class="fa fa-thin fa-file-lines hidden lg:block lg:text-3xl "></i>
+                    <h1>Case Studies</h1>
                 </div>
             </div>
-            <div class="bg-white py-2 rounded-xl w-full hover:shadow-xl mb-6 hover:-translate-y-0.5 cursor-pointer hover:delay-150">
-                <div class="border-l-4 border-cyan-600 overflow-hidden p-2">
-                    <h2 class="text-black font-semibold cursor-pointer">A Marketer's Guide to Price Comparison
-                        Websites</h2>
-                    <div class="flex justify-between text-xs p-1 items-center text-gray-400">
-                        <div class="inline-grid xl:flex"><a href="">John Doe</a>
-                        </div>
-                        <div class="xl:flex items-center"><a href="">
-                                <small class="float-right  text-xs">April 16, 2020 .</small></a>
-                            <h3 class="font-muted"><i class="fa fa-thin fa-clock"></i>1 min</h3>
-                        </div>
-                    </div>
+            <div
+                class="bg-white lg:py-2 rounded-xl  w-full hover:shadow-xl gap-2  mb-6 hover:-translate-y-0.5 cursor-pointer hover:delay-150">
+                <div
+                    class="overflow-hidden p-6 text-sm  lg:text-xl lg:font-bold lg:text-blue-600 text-gray-400 font-semibold   hover:text-gray-400 text-center">
+                    <i class="fa fa-thin fa-file-lines hidden lg:block lg:text-3xl"></i>
+                    <h1>Case Studies</h1>
                 </div>
             </div>
-            <div class="bg-white py-2 rounded-xl w-full hover:shadow-xl mb-6 hover:-translate-y-0.5 cursor-pointer hover:delay-150">
-                <div class="border-l-4 border-cyan-600 overflow-hidden p-2">
-                    <h2 class="text-black font-semibold cursor-pointer">A Marketer's Guide to Price Comparison
-                        Websites</h2>
-                    <div class="flex justify-between text-xs p-1 items-center text-gray-400">
-                        <div class="inline-grid xl:flex"><a href="">John Doe</a>
-                        </div>
-                        <div class="xl:flex items-center"><a href="">
-                                <small class="float-right  text-xs">April 16, 2020 .</small></a>
-                            <h3 class="font-muted"><i class="fa fa-thin fa-clock"></i>1 min</h3>
-                        </div>
-                    </div>
+            <div
+                class="bg-white lg:py-2 rounded-xl  w-full hover:shadow-xl gap-2  mb-6 hover:-translate-y-0.5 cursor-pointer hover:delay-150">
+                <div
+                    class="overflow-hidden p-6 text-sm  lg:text-xl lg:font-bold lg:text-blue-600 text-gray-400 font-semibold   hover:text-gray-400 text-center">
+                    <i class="fa fa-thin fa-file-lines hidden lg:block lg:text-3xl"></i>
+                    <h1>Case Studies</h1>
                 </div>
             </div>
-            <div class="bg-white py-2 rounded-xl w-full hover:shadow-xl mb-6 hover:-translate-y-0.5 cursor-pointer hover:delay-150">
-                <div class="border-l-4 border-cyan-600 overflow-hidden p-2">
-                    <h2 class="text-black font-semibold cursor-pointer">A Marketer's Guide to Price Comparison
-                        Websites</h2>
-                    <div class="flex justify-between text-xs p-1 items-center text-gray-400">
-                        <div class="inline-grid xl:flex"><a href="">John Doe</a>
-                        </div>
-                        <div class="xl:flex items-center"><a href="">
-                                <small class="float-right  text-xs">April 16, 2020 .</small></a>
-                            <h3 class="font-muted"><i class="fa fa-thin fa-clock"></i>1 min</h3>
-                        </div>
-                    </div>
+            <div
+                class="bg-white lg:py-2 rounded-xl  w-full hover:shadow-xl gap-2  mb-6 hover:-translate-y-0.5 cursor-pointer hover:delay-150">
+                <div
+                    class="overflow-hidden p-6 text-sm  lg:text-xl lg:font-bold lg:text-blue-600 text-gray-400 font-semibold   hover:text-gray-400 text-center">
+                    <i class="fa fa-thin fa-file-lines hidden lg:block lg:text-3xl"></i>
+                    <h1>Case Studies</h1>
                 </div>
             </div>
         </div>
+        <div class="flex gap-3">
+        <div class="w-full  lg:w-full block">
+            <div class="relative w-full">
+                <div class="slide relative">
+                    <img class="w-full h-[300px] object-cover rounded-lg"
+                        src="https://source.unsplash.com/random/1920x1080/?wallpaper,landscape"></div>
+                <div class="slide relative">
+                    <img class="w-full h-[300px] object-cover rounded-lg"
+                        src="https://source.unsplash.com/random/1920x1080/?clouds,winters,mountains"> </div>
+                <div class="slide relative">
+                    <img class="w-full h-[300px] object-cover rounded-lg"
+                        src="https://source.unsplash.com/random/1920x1080/?modifycars,black">
+                </div> 
+                 <div class="flex justify-start items-center space-x-5">
+                  <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(1)"></div>
+                  <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(2)"></div>
+                  <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(3)"></div>
+              </div>
+        
+                <!-- The previous button -->
+                <a class="absolute left-3 rounded-full top-1/2 px-3 py-1 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-emerald-600 cursor-pointer"
+                    onclick="moveSlide(-1)">❮</a>
+        
+                <!-- The next button -->
+                <a class="absolute right-3 top-1/2 p-4 rounded-full -translate-y-1/2 px-3 py-1 bg-black/30 hover:bg-black/50 text-white hover:text-emerald-600 cursor-pointer"
+                    onclick="moveSlide(1)">❯</a>
+                  
+            </div><br>
+            <div class="gap-4 grid sm:grid-cols-1 lg:grid-cols-2">
+                <div
+                    class="bg-white py-2  rounded-xl w-full hover:shadow-xl hover:-translate-y-0.5 cursor-pointer hover:delay-150">
+                    <div class="border-l-4 border-cyan-600 flex overflow-hidden p-2 h-36 lg:h-44">
+                        <img src="/public/images/blog-img.webp" class="w-32 object-cover rounded-md" alt="">
+                        <div class="block p-2 lg:text-base m-auto space-y-2 lg:space-y-5 text-sm"><button
+                                class="rounded-md text-xs font-medium py-1 hover:text-gray-200 hover:bg-gray-500 px-2 bg-fuchsia-200">Advertising</button>
+                            <h2 class="text-black font-semibold cursor-pointer">An introduction to the third-party
+                                cookie crackdown</h2>
+                            <div class="flex justify-between  text-xs items-center text-gray-400">
+                                <div class="inline-grid font-semibold xl:flex"><a href="">John Doe</a>
+                                </div>
+                                <div class="flex items-center"><a href="">
+                                        <small class="float-right text-xs">April 16, 2020 .</small></a>
+                                    <p class="font-muted text-xs"><i class="fa fa-thin fa-clock mx-1"></i>1 min</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white py-1  rounded-xl w-full hover:shadow-xl hover:-translate-y-0.5 cursor-pointer hover:delay-150">
+                    <div class="border-l-4 border-cyan-600 flex overflow-hidden p-2 h-36 lg:h-44">
+                        <img src="/public/images/blog-img.webp" class="w-32 object-cover rounded-md" alt="">
+                        <div class="block p-2 lg:text-base m-auto space-y-2 lg:space-y-5 text-sm"><button
+                                class="rounded-md text-xs font-medium py-1 hover:text-gray-200 hover:bg-gray-500 px-2 bg-fuchsia-200">Advertising</button>
+                            <h2 class="text-black font-semibold cursor-pointer">An introduction to the third-party
+                                cookie crackdown</h2>
+                            <div class="flex justify-between  text-xs items-center text-gray-400">
+                                <div class="inline-grid font-semibold xl:flex"><a href="">John Doe</a>
+                                </div>
+                                <div class="flex items-center"><a href="">
+                                        <small class="float-right text-xs">April 16, 2020 .</small></a>
+                                    <p class="font-muted text-xs"><i class="fa fa-thin fa-clock mx-1"></i>1 min</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white py-2  rounded-xl w-full hover:shadow-xl hover:-translate-y-0.5 cursor-pointer hover:delay-150">
+                    <div class="border-l-4 border-cyan-600 flex overflow-hidden p-2 h-36 lg:h-44">
+                        <img src="/public/images/blog-img.webp" class="w-32 object-cover rounded-md" alt="">
+                        <div class="block p-2 lg:text-base m-auto space-y-2 lg:space-y-5 text-sm"><button
+                                class="rounded-md text-xs font-medium py-1 hover:text-gray-200 hover:bg-gray-500 px-2 bg-fuchsia-200">Advertising</button>
+                            <h2 class="text-black font-semibold cursor-pointer">An introduction to the third-party
+                                cookie crackdown</h2>
+                            <div class="flex justify-between  text-xs items-center text-gray-400">
+                                <div class="inline-grid font-semibold xl:flex"><a href="">John Doe</a>
+                                </div>
+                                <div class="flex items-center"><a href="">
+                                        <small class="float-right text-xs">April 16, 2020 .</small></a>
+                                    <p class="font-muted text-xs"><i class="fa fa-thin fa-clock mx-1"></i>1 min</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white py-2  rounded-xl w-full hover:shadow-xl hover:-translate-y-0.5 cursor-pointer hover:delay-150">
+                    <div class="border-l-4 border-cyan-600 flex overflow-hidden p-2 h-36 lg:h-44">
+                        <img src="/public/images/blog-img.webp" class="w-32 object-cover rounded-md" alt="">
+                        <div class="block p-2 lg:text-base m-auto space-y-2 lg:space-y-5 text-sm"><button
+                                class="rounded-md text-xs font-medium py-1 hover:text-gray-200 hover:bg-gray-500 px-2 bg-fuchsia-200">Advertising</button>
+                            <h2 class="text-black font-semibold cursor-pointer">An introduction to the third-party
+                                cookie crackdown</h2>
+                            <div class="flex justify-between  text-xs items-center text-gray-400">
+                                <div class="inline-grid font-semibold xl:flex"><a href="">John Doe</a>
+                                </div>
+                                <div class="flex items-center"><a href="">
+                                        <small class="float-right text-xs">April 16, 2020 .</small></a>
+                                    <p class="font-muted text-xs"><i class="fa fa-thin fa-clock mx-1"></i>1 min</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="hidden md:block w-1/3 ">
+            <div class="bg-slate-100  h-auto rounded-lg">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="6em" style="padding-top:1rem; margin-left:1rem" width="4em" xmlns="http://www.w3.org/2000/svg"><path d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z"></path></svg>
+                <h1
+                    class="text-2xl pb-3 px-4 lg:text-3xl  tracking-tight text-heading text-gray-500  font-bold">
+                    Best Networking Workshops</h1>
+                <p class="text-sm px-4 lg:text-base xl:text-lg text-gray-500 ">In this workshop, learn when and how to network with modern best practices</p>
+                <ul class="p-3 text-sm text-gray-500 list-none space-y-3">
+                    <li class="list-inside gap-y-2 list-disc"::before >Explain the importance of networking for career-building</li>
+                    <li class="list-inside gap-y-2 list-disc"::before >Practice modern tips for effective networking</li>
+                    <li class="list-inside gap-y-2 list-disc"::before >Understand the steps towards building your own network</li>
+                </ul>
+                 <div class="w-full text-center pt-36 pb-4">
+                    <button class="px-4 py-2 bg-emerald-600 hover:bg-slate-500 text-gray-200 rounded-full">Learn More</button>
+                 </div>
+            </div></div>
     </div>
+    </div>
+    <script>
+        var openButton = document.getElementById('open');
+        var dialog = document.getElementById('dialog');
+        var closeButton = document.getElementById('close');
+        var overlay = document.getElementById('overlay');
 
+        // show the overlay and the dialog
+        openButton.addEventListener('click', function () {
+            dialog.classList.remove('hidden');
+            overlay.classList.remove('hidden');
+        });
+
+        // hide the overlay and the dialog
+        closeButton.addEventListener('click', function () {
+            dialog.classList.add('hidden');
+            overlay.classList.add('hidden');
+        });
+        $(document).ready(function () {
+            $('#show').click(function () {
+                $('#menu').toggle("slide");
+            });
+        });
+          // set the default active slide to the first one
+          let slideIndex = 1;
+        showSlide(slideIndex);
+
+        // change slide with the prev/next button
+        function moveSlide(moveStep) {
+            showSlide(slideIndex += moveStep);
+        }
+
+        // change slide with the dots
+        function currentSlide(n) {
+            showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+            let i;
+            const slides = document.getElementsByClassName("slide");
+            const dots = document.getElementsByClassName('dot');
+            
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+
+            // hide all slides
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.add('hidden');
+            }
+
+            // remove active status from all dots
+            for (i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('bg-yellow-500');
+                dots[i].classList.add('bg-green-600');
+            }
+
+            // show the active slide
+            slides[slideIndex - 1].classList.remove('hidden');
+
+            // highlight the active dot
+            dots[slideIndex - 1].classList.remove('bg-green-600');
+            dots[slideIndex - 1].classList.add('bg-yellow-500');
+        }
+    </script>
 </body>
+
 </html>
